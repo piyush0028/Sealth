@@ -1,0 +1,12 @@
+import { getStorybookUI } from "@storybook/react-native";
+import "./storybook.requires";
+
+const StorybookUIRoot = getStorybookUI({
+  enableWebsockets: true,
+  onDeviceUI: true,
+  disableWebsockets: false,
+  query: "",
+  url: "ws://localhost:7007",
+});
+
+export default StorybookUIRoot;

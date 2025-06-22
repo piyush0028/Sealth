@@ -1,0 +1,14 @@
+import { configure, addDecorator } from "@storybook/react-native";
+import { withBackgrounds } from "@storybook/addon-ondevice-backgrounds";
+
+// Add decorators
+addDecorator(withBackgrounds);
+
+// Import all stories
+const loadStories = () => {
+  // Import story files here
+  require("../src/UI(Universal)/atoms/Heading.stories");
+  // Add more story imports as you create them
+};
+
+configure(loadStories, module);
